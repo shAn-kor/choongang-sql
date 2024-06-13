@@ -1,0 +1,57 @@
+-- 그룹 함수
+-- NULL 이 제외된 데이터들에 대해서 적용됨.
+SELECT MAX(SALARY), MIN(SALARY), SUM(SALARY), AVG(SALARY), COUNT(SALARY) FROM EMPLOYEES;
+
+-- MIN, MAX 는 날짜, 문자에도 적용된다.
+SELECT MIN(HIRE_DATE), MAX(HIRE_DATE), MIN(FIRST_NAME), MAX(FIRST_NAME) FROM EMPLOYEES;
+
+-- COUNT() 두가지 사용방법
+SELECT COUNT(*), COUNT(COMMISSION_PCT) FROM EMPLOYEES;
+
+-- 부서가 80인 사람들 중, 커미션이 가장 높은 사람
+SELECT MAX(COMMISSION_PCT) FROM EMPLOYEES WHERE DEPARTMENT_ID = 80;
+
+-- 그룹 함수는 일반 컬럼이랑 같이 사용 못한다. 다른 DB 중 나오는 DB도 있다.
+SELECT FIRST_NAME, AVG(SALARY) FROM EMPLOYEES; -- 안됨
+
+-- 그룹 함수 뒤에 OVER() 를 붙이면 모든 행에 대해 값이 들어가며 일반 컬럼과 동시에 사용 가능하다.
+SELECT FIRST_NAME, AVG(SALARY) OVER() FROM EMPLOYEES;
+
+---------------------------------------------------------------
+
+-- GROUP BY 절 -  WHERE 절 ORDER 절 사이에 적는다.
+-- GROUP BY 절 에서 사용한 컬럼만 SELECT에서 사용할 수 있다.
+SELECT DEPARTMENT_ID, 
+       SUM(SALARY), 
+       AVG(SALARY), 
+       MIN(SALARY), 
+       MAX(SALARY),
+       COUNT(*)
+FROM EMPLOYEES
+GROUP BY DEPARTMENT_ID;
+
+-- 2개 이상의 그룹화 (하위 그룹)
+SELECT DEPARTMENT_ID, JOB_ID
+       , SUM(SALARY) AS "부서 직무별 급여 합"
+       , AVG(SALARY) AS "부서 직무별 급여 평균"
+       , COUNT(*) AS 부서인원수
+       , COUNT(*) OVER() AS 직무별개수 -- COUNT(*) OVER() : 총 행의 개수
+FROM EMPLOYEES
+GROUP BY DEPARTMENT_ID, JOB_ID
+ORDER BY DEPARTMENT_ID DESC;
+
+SELECT EMPLOYEE_ID
+FROM EMPLOYEES
+GROUP BY EMPLOYEE_ID;
+
+SELECT DEPARTMENT_ID
+       , AVG(SALARY)
+FROM EMPLOYEES
+WHERE AVG(SALARY) > 1000 -- 그룹의 조건을 적는 곳은 HAVING 이라고 따로 있다.
+GROUP BY DEPARTMENT_ID;
+
+SELECT DEPARTMENT_ID, AVG(SALARY)
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID IS NOT NULL;
+GROUP BY DEPARTMENT_ID
+HAVING AVG(SALARY) >= 5000;
