@@ -102,3 +102,22 @@ WHERE EMPLOYEE_ID >= 150;
 
 
 -----------------------------------------------------------------------------
+-- ORACLE JOIN - 오라클 에서만 사용 가능, 조인할 테이블을 FROM 절에 쓰고 조인 조건을 WHERE 절에 쓴다.
+SELECT *
+FROM INFO I, AUTH A
+WHERE I.AUTH_ID=A.AUTH_ID; -- ORACLE INNER JOIN
+
+SELECT *
+FROM INFO I, AUTH A
+WHERE I.AUTH_ID=A.AUTH_ID(+); -- ORACLE LEFT JOIN
+
+SELECT *
+FROM INFO I, AUTH A
+WHERE I.AUTH_ID(+)=A.AUTH_ID; -- ORACLE RIGHT JOIN
+
+SELECT *
+FROM INFO I, AUTH A
+WHERE I.AUTH_ID(+)=A.AUTH_ID(+); -- ORACLE FULL RIGHT JOIN 은 없다.
+
+SELECT *
+FROM INFO I, AUTH A; -- ORACLE CROSS JOIN
