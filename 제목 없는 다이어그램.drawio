@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T06:38:02.332Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="YTuH5qg4RaIPseN4CAbe" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T06:47:44.971Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="OM286mciH9eA5UWdYgZw" version="24.5.5" type="github">
   <diagram name="페이지-1" id="XsGDQ1Vj5JvnLm1Gppbw">
     <mxGraphModel dx="989" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -20,7 +20,7 @@
         <mxCell id="1zNgTq5mqyCAEnHVRI2i-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=ERzeroToMany;startFill=0;" edge="1" parent="1" source="1zNgTq5mqyCAEnHVRI2i-6" target="1zNgTq5mqyCAEnHVRI2i-23">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1zNgTq5mqyCAEnHVRI2i-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=ERzeroToMany;endFill=0;startArrow=none;startFill=0;" edge="1" parent="1">
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=ERmany;endFill=0;startArrow=none;startFill=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="679.69" y="250" />
@@ -192,6 +192,12 @@
             <Array as="points">
               <mxPoint x="680" y="400" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=ERzeroToMany;startFill=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="600" as="sourcePoint" />
+            <mxPoint x="680" y="540" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
