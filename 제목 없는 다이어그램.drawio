@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T06:47:44.971Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="OM286mciH9eA5UWdYgZw" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T07:37:42.683Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Pow55JMwKCPQGVvtZXLe" version="24.5.5" type="github">
   <diagram name="페이지-1" id="XsGDQ1Vj5JvnLm1Gppbw">
     <mxGraphModel dx="989" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -199,6 +199,35 @@
             <mxPoint x="680" y="600" as="sourcePoint" />
             <mxPoint x="680" y="540" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-45" value="회원" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="164" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" target="1zNgTq5mqyCAEnHVRI2i-50" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="224" y="149.65999999999997" as="sourcePoint" />
+            <mxPoint x="310" y="150" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=ERone;endFill=0;startArrow=ERmany;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1zNgTq5mqyCAEnHVRI2i-50" target="1zNgTq5mqyCAEnHVRI2i-49">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="150" />
+              <mxPoint x="490" y="150" />
+            </Array>
+            <mxPoint x="429.65551724137936" y="100" as="sourcePoint" />
+            <mxPoint x="429.6899999999998" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-49" value="강의" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="540" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-50" value="신청" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="354" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1zNgTq5mqyCAEnHVRI2i-52" value="N : M 관계에선 관계를 뒤집고 테이블로 만든다." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="240" y="90" width="280" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
